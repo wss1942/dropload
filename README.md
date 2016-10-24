@@ -52,8 +52,8 @@ Zepto or jQuery 1.7+，recommend to use jQuery 2.x（not use them at the same ti
     <script src="../dist/dropload.min.js"></script>
 
 ````
-$('.element').dropload({
-    scrollArea : window,
+$('.element').dropload({   // $('.element')如果整页滑动就是body，如果是页面中的一部分滑动，就写会动的这部分，就是高度会不断增加的部分
+    scrollArea : window, // 整个网页滑动时就是window，网页中一部分滑动时就是滑动区域的容器（这个容器也应该是固定高度的，比如窗口的90%的高度）。
     loadDownFn : function(me){
         $.ajax({
             type: 'GET',
